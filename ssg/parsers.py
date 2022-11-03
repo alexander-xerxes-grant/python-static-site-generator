@@ -18,4 +18,7 @@ class Parser:
     
     def write(self, path: Path, dest: Path, content, ext=".html"):
         full_path = dest / path.with_suffix(ext).name
-        
+    
+    def valid_extension(self,extension):
+        if extension in self.extensions:
+            return True
